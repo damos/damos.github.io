@@ -15,30 +15,28 @@
 			div.title_container{
 				position: fixed;
 				width: 100%;
-				margin:0;
 			}
 			div.title_bar{
-				width: 100%;
-				margin: 0;
 				height: 63;
-				background-color: #085C04; 
-				text-align: center;
+				background-color: #085C04;
 			}
 			div.title_bar_edge{
-				width: 100%;
 				background-image: linear-gradient(#085C04, #00085C04);
 				height: 2;
-				margin:0;
-				text-align: center;
 			}
 			div.content_start{
 				margin-top: 63;
 			}
-			div.content_container{
+			div.title_content{
 				max-width: 1024;
 				width: 100%;
 				display: inline-block;
-				text-align: center;
+			}
+			div.content{
+				z-index: -1;
+				max-width: 1024;
+				width: 100%;
+				display: inline-block;
 			}
 			div.title_cell{
 				width: 100%
@@ -60,19 +58,22 @@
 				font-size: 12;
 				font-family: Courier;
 			}
-			img{
+			img.responsive{
 				width: 100%; 
 				height: auto;
 			}
-			.title_bar img {
+			img.profile_pic {
 		         max-width:150; 
 		         max-height: 150;
 		         overflow: visible;
 		         margin-right: 5; 
 		    }
-			@media screen and (max-width: 500px) {
-			    .title_bar img {
+			@media screen and (max-width: 550px) {
+			    img.profile_pic {
 			         width: 100;
+			    }
+			    img.android_icon{
+			    	width:50;
 			    }
 			}
 		</style>
@@ -80,22 +81,23 @@
 	<body>
 		<div class="title_container">
 			<div class="title_bar">
-				<div class="content_container" >
+				<div class="title_content">
 					<div class="title_cell" >
 						<h1 class="title">Darin Amos</h1>
 						<h4 class="title">Software Engineer.</h4>
 					</div>
 					<div class="title_cell" style="text-align: right; margin-top: -60">
-						<img src="SP-Round.png" />
+						<img class="responsive profile_pic" src="SP-Round.png" />
 					</div>
 				</div>
 			</div>
 			<div class="title_bar_edge" >
 			</div>
 		</div>
-		<div class="content_container content_start">
-			<div>
-				<img src="OpenGolf-Feature.jpg" />
+		<div class="content content_start">
+			<div class="content" style="position: relative;">
+				<img class="responsive" src="OpenGolf-Feature.jpg" />
+				<img class="android_icon" style="position: absolute; bottom: 10; right: 2" src="android_robot_logo.png" />
 			</div>
             <h1><a href="https://play.google.com/store/apps/details?id=ca.dait.opengolf.app" target="_blank">Google Play Store</a></h1>
 			<h2><a href="https://github.com/damos" target="_blank">Source code on Github</a></h2>
