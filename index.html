@@ -10,12 +10,27 @@
 				text-align: center;
 				font-family: sans-serif;
 			}
-			div.title_bar{
+			div.title_container{
 				position: fixed;
 				width: 100%;
-				background-color: #085C04;
+				margin:0;
+			}
+			div.title_bar{
+				width: 100%;
+				margin: 0;
+				height: 63;
+				background-color: #085C04; 
+				text-align: center;
+			}
+			div.title_bar_edge{
+				width: 100%;
+				background-image: linear-gradient(#085C04, #00085C04);
+				height: 2;
 				margin:0;
 				text-align: center;
+			}
+			div.content_start{
+				margin-top: 63;
 			}
 			div.content_container{
 				width:1024;
@@ -29,6 +44,7 @@
 				text-align: left;
 				font-size: 40;
 				margin: 3;
+				margin-left: 5;
 				color: white;
 			}
 			div.title_cell h4.title{
@@ -43,19 +59,23 @@
 		</style>
 	</head>
 	<body>
-		<div class="title_bar">
-			<div class="content_container" style="max-height: 65">
-				<div class="title_cell" >
-					<h1 class="title">Darin Amos</h1>
-					<h4 class="title">Software Engineer.</h4>
-				</div>
-				<div class="title_cell" style="text-align: right; margin-top: -60">
-					<img style="overflow: visible; margin-right: 5" height="150" width="150" src="SP-Round.png" />
+		<div class="title_container">
+			<div class="title_bar">
+				<div class="content_container" >
+					<div class="title_cell" >
+						<h1 class="title">Darin Amos</h1>
+						<h4 class="title">Software Engineer.</h4>
+					</div>
+					<div class="title_cell" style="text-align: right; margin-top: -60">
+						<img style="overflow: visible; margin-right: 5; z-index: 100" height="150" width="150" src="SP-Round.png" />
+					</div>
 				</div>
 			</div>
+			<div class="title_bar_edge" >
+			</div>
 		</div>
-		<div class="content_container">
-			<div style="margin-top: 65">
+		<div class="content_container content_start">
+			<div>
 				<img src="OpenGolf-Feature.jpg" />
 			</div>
             <h1><a href="https://play.google.com/store/apps/details?id=ca.dait.opengolf.app" target="_blank">Google Play Store</a></h1>
