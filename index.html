@@ -11,46 +11,48 @@
 				padding: : 0;
 				text-align: center;
 				font-family: Helvetica;
+				min-width: 360px;
 			}
-			div.title_container{
-				position: fixed;
-				width: 100%;
-			}
-			div.title_bar{
+			
+			div.header{
 				height: 63;
-				background-color: #085C04;
 			}
-			div.title_bar_edge{
-				background-image: linear-gradient(#085C04, #00085C04);
-				height: 2;
-			}
-			div.title_content{
-				position: relative;
-				width:100%;
-				max-width: 1024;
+			div.header_content{
 				display: inline-block;
-				color: white;
+				max-width: 1024;
+				width: 100%;
 			}
 			div.content_start{
 				margin-top: 63;
 			}
 			div.content{
 				z-index: -1;
+				display: inline-block;
 				max-width: 1024;
 				width: 100%;
-				display: inline-block;
 			}
-			div.title_content h1.title{
+
+			h1.title{
 				font-size: 40;
 				margin: 3;
 				padding: 0;
 				font-family: Georgia;
+				color: white;
 			}
-			div.title_content h4.title{
+			h4.title{
+				font-size: 12;
 				margin: 3;
 				padding: 0;
-				font-size: 12;
 				font-family: Courier;
+				color: white;
+			}
+
+
+			/* Responsive definitions */
+			div.social_media img.instagram{
+				width: 28px; 
+				height: 28px; 
+				margin-right: 10;
 			}
 			img.responsive{
 				width: 100%; 
@@ -64,14 +66,17 @@
 		    }
 		    div.social_media{
 				position: absolute; 
-				right:10; 
+				right:15; 
 				bottom: 10;
 			}			
-			@media screen and (max-width: 1024px) {
+			@media screen and (max-width: 1220px) {
 				div.social_media{
 					position: absolute; 
 					right: 160; 
 					bottom: 10;
+				}
+				div.social_media_snap{
+					position: relative;
 				}
 			}
 			@media screen and (max-width: 550px) {
@@ -82,7 +87,6 @@
 			    	width:30;
 			    }
 				div.social_media{
-					position: absolute; 
 					right: 110; 
 					bottom: 10;
 				}
@@ -94,35 +98,49 @@
 					font-size: 8;
 				}
 			}
-			@media screen and (max-width: 380px) {
-				div.social_media{
-					display: none;
+			@media screen and (max-width: 460px) {
+				div.social_media{ 
+					text-align: left;
+					right: 0;
+					left: 10; 
+					bottom: 0;
+				}
+				div.social_media img.instagram{
+					width: 12px;
+					height: 12px;
+				}
+				div.social_media img.linkedIn{
+					height: 12px;
+					width: auto;
+					margin-left: -5;
 				}
 			}
 		</style>
 	</head>
 	<body>
-		<div class="title_container">
-			<div class="title_bar">
-				<div class="title_content">
-					<div style="position: absolute; left: 0">
-						<h1 class="title" style="margin-left: 5">Darin Amos</h1>
-						<h4 class="title" style="position: absolute; right: 0; bottom: -8">Software Engineer.</h4>
+		<div style= "position: fixed; width: 100%; top:0">
+			<div class="header" style="background-color: #085C04; position: relative">
+				<div class="header header_content social_media_snap" >
+					<div class="header header_content" style="position: relative;">
+						<div style="position: absolute; left: 0">
+							<h1 class="title" style="margin-left: 5">Darin Amos</h1>
+							<h4 class="title" style="position: absolute; right: 0; bottom: -8">Software Engineer.</h4>
+						</div>
+						<div style="position: absolute; right: 0; top: 5;">
+							<img class="responsive profile_pic" src="SP-Round.png" />
+						</div>
 					</div>
-					<div style="position: absolute; right: 0; top: 5;">
-						<img class="responsive profile_pic" src="SP-Round.png" />
+					<div class="social_media">
+						<a href="https://www.instagram.com/darin_cs/" target="_blank"><img class="instagram" src="glyph-logo-white_May2016.png"/></a>
+						<a href="http://www.linkedin.com/in/darin-amos" target="_blank"><img class="linkedIn" src="In-White-28px-R.png"/></a>
 					</div>
-				</div>
-				<div class="social_media">
-					<a href="https://www.instagram.com/darin_cs/" target="_blank"><img style="width:28px; height: 28px; margin-right: 10" src="glyph-logo-white_May2016.png"/></a>
-					<a href="http://www.linkedin.com/in/darin-amos" target="_blank"><img src="In-White-28px-R.png"/></a>
 				</div>
 			</div>
-			<div class="title_bar_edge" ></div>
+			<div class="title_bar_edge" style="background-image: linear-gradient(#085C04, #00085C04); height: 2;"></div>
 		</div>
-		<div class="content content_start">
-			<div class="content" style="position: relative;">
-				<img class="responsive" src="OpenGolf-Feature.jpg" />
+		<div class="content_start content">
+			<div class="content" style="position: relative">
+				<img class="responsive" src="dawn-dusk-web-resized-with-text.jpg" />
 				<a href="https://play.google.com/store/apps/details?id=ca.dait.opengolf.app" target="_blank">
 					<img class="android_icon" style="position: absolute; bottom: 10; right: 3" src="android_robot_logo.png" />
 				</a>
