@@ -1,1 +1,1 @@
-# darinamos.ca hosted on github pages.
+# https://darinamos.ca
